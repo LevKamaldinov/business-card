@@ -48,7 +48,7 @@ header > figure > img {
 .skills > figure {
     width: 200px;
     height: 200px;
-    margin-bottom: 40px;
+    margin: 0px 0px 40px 0px;
 }
 .skills > figure > img {
     height: 100%;
@@ -119,7 +119,11 @@ a > figure {
 }
 a > figure > img {
     width: 100%;
+    height: 100%;
     border-radius: 30px;
+}
+.experience__el > p {
+    margin-top: 30px;
 }
 
 .contacts__wrapper {
@@ -156,12 +160,9 @@ button:hover, button:focus {
         margin: 0px;
     }
 }
-@media(max-width: 500px) {
+@media(max-width: 650px) {
     header {
         grid-template-columns: 1fr;
-    }
-    h2, h3 {
-        width: 200px;
     }
     .skills > figure > img {
         width: 100%;
@@ -169,19 +170,38 @@ button:hover, button:focus {
     .experience {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 20px;
-        margin-right: 20px;
-        background-color: #F4FF81;
-        border-radius: 30px;
+        justify-content: center;
+    }
+    .experience__el {
+        width: 300px;
+    }
+    .experience__el__ten > span {
+        top: 15%;
+    }
+}
+@media(max-width: 500px) {
+    h2, h3 {
+        width: 200px;
+    }
+    .experience {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .experience__el {
+        width: 250px;
     }
     .experience__el__ten {
         margin: 0px 10px 15px;
         width: 100%;
     }
     a > figure {
-        height: 230px;
+        width: 100%;
         margin: 0px;
     }
+    .experience__el__ten > span {
+        top: 30%;
+    }
+
 }
 @media(max-width: 400px) {
     a > figure {
@@ -193,5 +213,8 @@ button:hover, button:focus {
     a > figure {
         height: 150px;
         margin: 0px;
+    }
+    .experience__el__ten > span {
+        top: 15%;
     }
 }
